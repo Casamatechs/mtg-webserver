@@ -15,15 +15,18 @@ public class Card {
     @Nullable
     private String set;
 
+    private String imgUrl;
+
     public Card(kr.sanchez.mtg.grpc.Card card) {
         this.name = card.getName();
         this.lang = card.getLang();
         this.cond = card.getCond();
-        this.store = card.getCond();
+        this.store = card.getStore();
         this.price = card.getPrice();
         this.stock = card.getStock();
         this.foil = card.getFoil();
         this.set = card.getSet();
+        this.imgUrl = card.getImgUrl();
     }
 
     public String getName() {
@@ -88,5 +91,13 @@ public class Card {
 
     public void setSet(String set) {
         this.set = set;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }

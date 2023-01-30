@@ -3,7 +3,7 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_package = "kr.sanchez.mtg.grpc";
 
-option optimize_for = SPEED;
+option  optimize_for = SPEED;
 
 package cards;
 
@@ -30,4 +30,5 @@ message Card {
     int32 stock = 6;
     bool foil = 7;
     string set = 8;
+    string imgUrl = 9;
 }
